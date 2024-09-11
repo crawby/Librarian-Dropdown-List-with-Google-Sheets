@@ -1,5 +1,5 @@
 const sheetID = '1s4pEOts4GVmCVB-OpEKLxJoVXVKVmI1f4AH7ywqeQa4'; // your updated sheet ID
-const apiKey = 'AIzaSyAzyY--HvyuEawUeZLOKgzp8FjdXEwnQBg'; // your API key
+const apiKey = 'AIzaSyDeJhACy6IFmBDFmICTYu83h6Vk9MlqPHo'; // your API key
 const dropdown = document.getElementById('institutionDropdown');
 
 // URL to fetch data from the Google Sheet
