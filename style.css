@@ -57,6 +57,12 @@ select:focus {
     background-color: #fff;
     border-radius: 4px;
     width: 100%;
+    max-width: 400px;
+    margin: 20px auto; /* Center */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    border: 1px solid #ddd;
+}
+
 
 
 
