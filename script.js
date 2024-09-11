@@ -6,7 +6,8 @@ const contactInfoDiv = document.getElementById('contactInfo');
 // URL to fetch data from the Google Sheet
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/Sheet1?key=${apiKey}`;
 
-// Fetch data and populate the dropdown
+let institutionData = {}; // Initialize an empty object to store institution and contact info
+
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -15,10 +16,15 @@ fetch(url)
             const rows = data.values;
             dropdown.innerHTML = '<option value="">Institution List</option>'; // Clear the loading text
 
+            // Populate dropdown and institutionData with institutions and their contact info
             rows.forEach(row => {
+                const institutionName = row[0]; // Institution name
+                const contactInfo = row[1]; // Contact information
+                institutionData[institutionName] = contactInfo; // Store in object
+
                 const option = document.createElement('option');
-                option.value = row[0]; // Set the institution name as the value
-                option.text = row[0];  // Display the institution name
+                option.value = institutionName;
+                option.text = institutionName;
                 dropdown.appendChild(option);
             });
         } else {
@@ -30,13 +36,6 @@ fetch(url)
         dropdown.innerHTML = '<option>Error loading data</option>';
     });
 
-// Example of institution data with contact information
-const institutionData = {
-    'Institution 1': 'Contact: librarian1@institution1.edu',
-    'Institution 2': 'Contact: librarian2@institution2.edu',
-    // Add more institutions and their contact info here
-};
-
 // Listen for changes in the dropdown and display contact information
 dropdown.addEventListener('change', function() {
     const selectedInstitution = dropdown.value;
@@ -46,5 +45,6 @@ dropdown.addEventListener('change', function() {
     // Display the contact info in the div
     contactInfoDiv.innerText = contactInfo;
 });
+
 
 
