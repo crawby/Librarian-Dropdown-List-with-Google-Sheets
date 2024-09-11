@@ -10,13 +10,14 @@ body {
 .container {
     text-align: center;
     margin-top: 50px;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow around container */
-    max-width: 600px; /* Limit width */
-    margin: 50px auto; /* Center the container */
-    border: 1px solid #ddd; /* Light border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Makes it responsive */
+    width: 500px;    /* Base width for larger screens */
+    margin: 50px auto;
+    border: 1px solid #ddd; /* Box around everything */
 }
 
 h1 {
@@ -36,16 +37,16 @@ h1 {
     font-size: 16px;
     padding: 10px;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%; /* Responsive dropdown */
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for dropdown */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 select:focus {
     outline: none;
-    border-color: #d32f2f; /* Red border on focus */
+    border-color: #d32f2f;
 }
 
 /* Contact Info Box Styling */
@@ -53,15 +54,15 @@ select:focus {
     font-size: 16px;
     color: #d32f2f;
     margin-top: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto; /* Center */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow */
-    border: 1px solid #ddd;
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+    }
+}
+
 
 
 
