@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-container {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    color: #e60000;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #contact-info {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    word-wrap: break-word; /* Ensure long text breaks properly */
+  }
+  
+  /* Responsive Design: Adjusts layout for smaller screens */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  
+    select {
+      font-size: 14px;
+    }
+  
+    #contact-info {
+      font-size: 14px;
+    }
+  }
+  
