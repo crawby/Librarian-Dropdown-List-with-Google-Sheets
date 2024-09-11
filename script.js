@@ -11,16 +11,15 @@ let institutionData = {}; // Initialize an empty object to store institution and
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data); // Log the response for debugging
         if (data.values) {
             const rows = data.values;
-            dropdown.innerHTML = '<option value="">Institution List</option>'; // Clear the loading text
+            dropdown.innerHTML = '<option value="" disabled selected>Please select your institution</option>'; // Greyed-out default
 
             // Populate dropdown and institutionData with institutions and their contact info
             rows.forEach(row => {
-                const institutionName = row[0]; // Institution name
-                const contactInfo = row[1]; // Contact information
-                institutionData[institutionName] = contactInfo; // Store in object
+                const institutionName = row[0];
+                const contactInfo = row[1];
+                institutionData[institutionName] = contactInfo;
 
                 const option = document.createElement('option');
                 option.value = institutionName;
@@ -39,15 +38,12 @@ fetch(url)
 // Listen for changes in the dropdown and display contact information
 dropdown.addEventListener('change', function() {
     const selectedInstitution = dropdown.value;
-    console.log(selectedInstitution); // Log the selected institution for debugging
-    const contactInfo = institutionData[selectedInstitution];
+    const contactInfo = institutionData[selectedInstitution] || 'Contact info not available';
 
-    if (contactInfo) {
-        contactInfoDiv.innerText = `Please Contact: ${contactInfo} with any questions.`;
-    } else {
-        contactInfoDiv.innerText = 'Contact info not available.';
-    }
+    // Display the contact info in the div
+    contactInfoDiv.innerText = `Please Contact: ${contactInfo} with any questions.`;
 });
+
 
 
 
