@@ -12,7 +12,7 @@ fetch(url)
     .then(response => response.json())
     .then(data => {
         if (data.values) {
-            const rows = data.values;
+            const rows = data.values.slice(1); // Skip the first row (header)
             dropdown.innerHTML = '<option value="" disabled selected>Please select your institution</option>'; // Greyed-out default
 
             // Populate dropdown and institutionData with institutions and their contact info
@@ -43,6 +43,7 @@ dropdown.addEventListener('change', function() {
     // Display the contact info in the div
     contactInfoDiv.innerText = `Please Contact: ${contactInfo} with any questions.`;
 });
+
 
 
 
