@@ -40,11 +40,15 @@ fetch(url)
 dropdown.addEventListener('change', function() {
     const selectedInstitution = dropdown.value;
     console.log(selectedInstitution); // Log the selected institution for debugging
-    const contactInfo = institutionData[selectedInstitution] || 'Contact info not available';
+    const contactInfo = institutionData[selectedInstitution];
 
-    // Display the contact info in the div
-    contactInfoDiv.innerText = contactInfo;
+    if (contactInfo) {
+        contactInfoDiv.innerText = `Please Contact: ${contactInfo} with any questions.`;
+    } else {
+        contactInfoDiv.innerText = 'Contact info not available.';
+    }
 });
+
 
 
 
