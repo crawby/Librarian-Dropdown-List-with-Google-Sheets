@@ -11,19 +11,34 @@ body {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    max-width: 500px;
+    margin: 50px auto; /* Center the container */
+    border: 1px solid #ddd;
 }
 
-/* White box and dropdown styling */
+h1 {
+    color: #d32f2f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.small-text {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Dropdown styles */
 #institutionDropdown {
     font-size: 16px;
-    padding: 15px;
-    width: 350px;
+    padding: 10px;
+    width: 100%;
     border: 1px solid #ccc;
-    background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center the dropdown */
-    display: block;
+    margin-bottom: 20px;
 }
 
 select:focus {
@@ -33,19 +48,9 @@ select:focus {
 
 /* Contact Info Box Styling */
 #contactInfo {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    width: 350px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #d32f2f;
+    margin-top: 20px;
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
-    #institutionDropdown, #contactInfo {
-        width: 450px;
-    }
-}
 
