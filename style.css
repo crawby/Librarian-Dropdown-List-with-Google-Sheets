@@ -49,13 +49,6 @@ select:focus {
     border-color: #d32f2f;
 }
 
-/* Contact Info Box Styling */
-#contactInfo {
-    font-size: 16px;
-    color: #d32f2f;
-    margin-top: 20px;
-}
-
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .container {
