@@ -41,7 +41,7 @@ dropdown.addEventListener('change', function() {
     const contactInfo = institutionData[selectedInstitution] || 'Contact info not available';
 
     // Display the contact info in the div
-    contactInfoDiv.innerText = `Please Contact: ${contactInfo} with any questions.`;
+    contactInfoDiv.innerText = `Please Contact ${contactInfo} with any questions.`;
 });
 
 
