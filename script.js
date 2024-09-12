@@ -12,6 +12,7 @@ fetch(url)
     .then(response => response.json())
     .then(data => {
         if (data.values) {
+            const rows = data.values; // No need to skip the first row anymore
             dropdown.innerHTML = '<option value="" disabled selected>Please select your institution</option>'; // Greyed-out default
 
             // Populate dropdown and institutionData with institutions and their contact info
