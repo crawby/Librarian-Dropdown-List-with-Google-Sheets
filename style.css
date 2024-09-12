@@ -32,7 +32,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    width: 100%; /* Ensures it follows the container width */
+    width: 100%;
 }
 
 .small-text {
@@ -40,7 +40,9 @@ h1 {
     margin-bottom: 20px;
     font-size: 14px;
     text-align: center;
-    width: 100%; /* Ensure text remains centered */
+    width: 100%; 
+    word-wrap: break-word; /* Forces long words to break */
+    hyphens: auto; /* Adds hyphens if necessary */
 }
 
 /* Dropdown styles */
@@ -70,13 +72,17 @@ select:focus {
     font-size: 16px;
     color: #333;
     margin-top: 20px;
-    width: 100%; /* Ensures it follows container width */
+    width: 100%;
+    word-wrap: break-word; /* Forces long text to break if needed */
+    hyphens: auto; /* Adds hyphens where appropriate */
 }
 
 .contact-info div {
     margin: 5px 0;
-    width: 100%; /* Ensure the content takes up full width */
+    width: 100%; 
     text-align: center;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Flexbox adjustments for mobile compatibility */
@@ -106,8 +112,9 @@ select:focus {
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .container {
-        max-width: 667px; /* Updated max-width */
+        max-width: 667px;
     }
 }
+
 
 
