@@ -31,6 +31,7 @@ h1 {
     color: #d32f2f;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
 .small-text {
@@ -57,6 +58,22 @@ select:focus {
     border-color: #d32f2f;
 }
 
+/* Contact information styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.contact-info div {
+    margin: 5px 0;
+}
+
 /* Flexbox adjustments for mobile compatibility */
 @media (max-width: 600px) {
     .container {
@@ -77,6 +94,10 @@ select:focus {
         font-size: 14px;
         padding: 8px;
     }
+
+    .contact-info {
+        font-size: 14px;
+    }
 }
 
 /* Media query for larger screens */
@@ -85,9 +106,3 @@ select:focus {
         max-width: 500px;
     }
 }
-
-
-
-
-
-
