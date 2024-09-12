@@ -5,19 +5,26 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 90%; /* Makes it responsive */
-    width: 500px;    /* Base width for larger screens */
-    margin: 50px auto;
-    border: 1px solid #ddd; /* Box around everything */
+    max-width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px;
+    border: 1px solid #ddd;
 }
 
 h1 {
@@ -30,6 +37,7 @@ h1 {
     color: #666;
     margin-bottom: 20px;
     font-size: 14px;
+    text-align: center;
 }
 
 /* Dropdown styles */
@@ -37,16 +45,38 @@ h1 {
     font-size: 16px;
     padding: 10px;
     width: 100%;
-    max-width: 100%; /* Responsive dropdown */
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 select:focus {
     outline: none;
     border-color: #d32f2f;
+}
+
+/* Flexbox adjustments for mobile compatibility */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    #institutionDropdown {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 /* Media query for larger screens */
@@ -55,6 +85,7 @@ select:focus {
         max-width: 500px;
     }
 }
+
 
 
 
